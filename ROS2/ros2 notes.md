@@ -5,7 +5,7 @@
 	* colcon build
 	* source /opt/ros/humble/setup.bash
 	* ros2 run [package_name] [node_name]
-	
+		
 ### When modifying the package and other Notes
 * source install/setup.bash - this will have to be done whenever a new terminal is opened
 	- This is likley (should be) located at /opt/ros/humble/setup.bash
