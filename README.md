@@ -1,6 +1,6 @@
 # Website
 ## Status
-[![pages-build-deployment](https://github.com/jackrschumacher/ASTRA-Notes/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/jackrschumacher/ASTRA-Notes/actions/workflows/pages/pages-build-deployment)
+[![Deploy static content to Pages](https://github.com/jackrschumacher/ASTRA-Notes/actions/workflows/static.yml/badge.svg)](https://github.com/jackrschumacher/ASTRA-Notes/actions/workflows/static.yml)
 
 ## About
 A personal website for showcasing my projects and more
