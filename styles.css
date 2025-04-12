@@ -48,8 +48,9 @@ body {
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
-    background-color: #acacac;
+    background-color: rgb(188, 188, 188);
     border-radius: 4px;
+    font-weight: bold;
   }
   
   /* Display list items side by side */
@@ -61,20 +62,20 @@ ul.breadcrumb {
   
   /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
-    padding: 8px;
+    padding: 6px;
     color: black;
     content: ">\00a0";
   }
   
   /* Add a color to all links inside the list */
   ul.breadcrumb li a {
-    color: #000000;
+    color: black;
     text-decoration: none;
   }
   
   /* Add a color on mouse-over */
   ul.breadcrumb li a:hover {
-    color: #6284ff;
+    color: #4069ff;
     text-decoration: underline;
 
   }
