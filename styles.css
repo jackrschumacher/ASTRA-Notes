@@ -1,0 +1,80 @@
+body {
+    margin: 15px;
+    background-color: whitesmoke;
+    color: black;
+    text-align: left;
+    font-size: 14;
+    font-family: Arial, Helvetica, sans-serif
+  }
+  /* Deprecated right now */
+  .main-nav {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font: 1.2em sans-serif;
+  
+    display: flex;
+    background-color: gray;
+    flex-direction: row;
+    border-radius: 4px;
+  
+  
+  
+  }
+  
+  
+  .main-nav a {
+    padding: 0.5em 1em;
+    display: block;
+    color: black;
+    /*Remove the link line from the menu*/
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  /* Makes the links standout when moused over */
+  .main-nav a:hover {
+    background-color: rgb(188, 188, 188);
+  }
+  
+  
+  .push {
+    margin-left: auto;
+    text-decoration: none;
+  }
+
+  /* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #acacac;
+    border-radius: 4px;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    border-radius: 4px;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #6284ff;
+    text-decoration: underline;
+
+  }
