@@ -8,3 +8,4 @@ A personal website for showcasing my projects and more
 [Website link](https://jackrschumacher.github.io/ASTRA-Notes)
 
 ## TODO
+* Add more documentation
