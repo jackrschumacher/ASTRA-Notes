@@ -1,7 +1,6 @@
-# Website
+# ASTRA-Notes
 ## Status
-[![pages-build-deployment](https://github.com/jackrschumacher/ASTRA-Notes/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/jackrschumacher/ASTRA-Notes/actions/workflows/pages/pages-build-deployment)
-
+[![.github/workflows/publish.yml](https://github.com/jackrschumacher/ASTRA-Notes/actions/workflows/publish.yml/badge.svg)](https://github.com/jackrschumacher/ASTRA-Notes/actions/workflows/publish.yml)
 ## About
 
 [Website link](https://jackrschumacher.github.io/ASTRA-Notes)
