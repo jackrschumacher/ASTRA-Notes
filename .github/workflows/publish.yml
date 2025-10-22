@@ -17,6 +17,6 @@ jobs:
           folder: www
       - uses: logseq/publish-spa@main
         with:
-          graph-directory: logseq
+          graph-directory: /logseq
           output-directory: out
           version: nightly
