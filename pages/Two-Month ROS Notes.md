@@ -7,3 +7,4 @@ tags:: two-month, ROS2
 - [[About ROS&ROS Resources]]
 - [[Installing ROS2 Humble]]
 - [[Building and Running a ROS2 package]]
+- [[Common Issues]]
