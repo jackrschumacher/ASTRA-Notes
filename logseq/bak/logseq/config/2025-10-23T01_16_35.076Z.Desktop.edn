@@ -420,4 +420,7 @@
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
  :publishing/all-pages-public? true
- :graph/settings {:journal? true}}
+ :graph/settings {:journal? false
+ :builtin-pages? true
+ :excluded-pages? true
+ :orphan-pages? true}}

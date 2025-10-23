@@ -4,5 +4,6 @@ tags:: two-month, ROS2
 - [:h3 "Resources"]
 - |Resource|Note|
   |https://github.com/jackrschumacher/TM-Optimized|Optimized Two Month code|
-- # Building
--
+- [[About ROS&ROS Resources]]
+- [[Installing ROS2 Humble]]
+- [[Building and Running a ROS2 package]]

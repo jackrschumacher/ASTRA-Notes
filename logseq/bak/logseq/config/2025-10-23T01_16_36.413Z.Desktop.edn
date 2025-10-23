@@ -421,4 +421,6 @@
  :file/name-format :triple-lowbar
  :publishing/all-pages-public? true
  :graph/settings {:journal? false
- :builtin-pages? true}}
+ :builtin-pages? false
+ :excluded-pages? true
+ :orphan-pages? true}}
