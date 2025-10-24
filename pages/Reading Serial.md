@@ -46,3 +46,4 @@ description:: Info about using serial for embedded code
     readSerial(); //Call the read serial function
   }
   ```
+- [View the original file here](https://github.com/jackrschumacher/TM-Optimized/blob/embedded-training/embedded-training/embedded-training/embedded-training.ino)

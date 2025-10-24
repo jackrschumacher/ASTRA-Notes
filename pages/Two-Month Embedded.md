@@ -8,6 +8,6 @@ tags:: Two-Month, embedded
 - [[SD Card]]
 - [[Reading Serial]]
 - [[Working with the BNO055]]
-- [[Working with the BMP]]
+- [[Working with the BMP388]]
 - [[Servos]]
 - [[General Tips]]
