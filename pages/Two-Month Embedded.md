@@ -7,7 +7,7 @@ tags:: Two-Month, embedded
 - # Helpful code Snippets and info
 - [[SD Card]]
 - [[Reading Serial]]
-- [[Working with the BNO]]
+- [[Working with the BNO055]]
 - [[Working with the BMP]]
 - [[Servos]]
 - [[General Tips]]
