@@ -10,6 +10,9 @@ path = 'github.com/alex-shpak/hugo-book'
   BookSection = 'docs'   # This makes the menu look in content/docs/
   BookTheme = 'auto'     # Enables dark/light mode
   BookSearch = true      # Enables the search bar
+  BookDateFormat = 'January 2, 2006'
+  enableGitInfo = true
+  BookLastChangeLink = 'https://github.com/jackrschumacher/ASTRA-Notes/commit/{{ .GitInfo.Hash }}'
 
 # Rendering settings (needed for math/mermaid)
 [markup]
