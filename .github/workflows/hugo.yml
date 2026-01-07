@@ -44,7 +44,7 @@ jobs:
 
       - name: Build with Hugo
         run: hugo --minify
-        working-directory: ./aastra-docs # <--- POINTS TO YOUR SUBDIRECTORY
+        working-directory: ./astra-docs # <--- POINTS TO YOUR SUBDIRECTORY
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
