@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Important Links# Adafruit BMP3xx (BMP388&amp;BMP390) Datasheet (it’s one datasheet for both) Adafruit BMP3xx GitHub (example code)
+Example code# Example code from Manufacturer# /*************************************************************************** This is a library for the BMP3XX temperature &amp; pressure sensor Designed specifically to work with the Adafruit BMP388 Breakout ----&gt; http://www.adafruit.com/products/3966 These sensors use I2C or SPI to communicate, 2 or 4 pins are required to interface. Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit! Written by Limor Fried &amp; Kevin Townsend for Adafruit Industries. BSD license, all text above must be included in any redistribution ***************************************************************************/ #include &lt;Wire.h&gt; #include &lt;SPI.h&gt; #include &lt;Adafruit_Sensor.h&gt; #include &#34;Adafruit_BMP3XX.h&#34; // Need to modify these pins #define BMP_SCK 13 #define BMP_MISO 12 #define BMP_MOSI 11 #define BMP_CS 10 #define SEALEVELPRESSURE_HPA (1013.25) Adafruit_BMP3XX bmp; void setup() { Serial.begin(115200); while (!Serial); Serial.println(&#34;Adafruit BMP388 / BMP390 test&#34;); if (!bmp.begin_I2C()) { // hardware I2C mode, can pass in address &amp; alt Wire //if (! bmp.begin_SPI(BMP_CS)) { // hardware SPI mode //if (! bmp.begin_SPI(BMP_CS, BMP_SCK, BMP_MISO, BMP_MOSI)) { // software SPI mode Serial.println(&#34;Could not find a valid BMP3 sensor, check wiring!&#34;); while (1); } // Set up oversampling and filter initialization bmp.setTemperatureOversampling(BMP3_OVERSAMPLING_8X); bmp.setPressureOversampling(BMP3_OVERSAMPLING_4X); bmp.setIIRFilterCoeff(BMP3_IIR_FILTER_COEFF_3); bmp.setOutputDataRate(BMP3_ODR_50_HZ); } void loop() { if (! bmp.performReading()) { Serial.println(&#34;Failed to perform reading :(&#34;); return; } Serial.print(&#34;Temperature = &#34;); Serial.print(bmp.temperature); Serial.println(&#34; *C&#34;); Serial.print(&#34;Pressure = &#34;); Serial.print(bmp.pressure / 100.0); Serial.println(&#34; hPa&#34;); Serial.print(&#34;Approx. Altitude = &#34;); Serial.print(bmp.readAltitude(SEALEVELPRESSURE_HPA)); Serial.println(&#34; m&#34;); Serial.println(); delay(2000); }Link to example code on GitHub
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/two-month/sensors/working-with-the-bnp3xx/">
+  <meta property="og:site_name" content="ASTRA Notes">
+  <meta property="og:title" content="Working with the BMP388">
+  <meta property="og:description" content="Important Links# Adafruit BMP3xx (BMP388&amp;BMP390) Datasheet (it’s one datasheet for both) Adafruit BMP3xx GitHub (example code)
+Example code# Example code from Manufacturer# /*************************************************************************** This is a library for the BMP3XX temperature &amp; pressure sensor Designed specifically to work with the Adafruit BMP388 Breakout ----&gt; http://www.adafruit.com/products/3966 These sensors use I2C or SPI to communicate, 2 or 4 pins are required to interface. Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit! Written by Limor Fried &amp; Kevin Townsend for Adafruit Industries. BSD license, all text above must be included in any redistribution ***************************************************************************/ #include &lt;Wire.h&gt; #include &lt;SPI.h&gt; #include &lt;Adafruit_Sensor.h&gt; #include &#34;Adafruit_BMP3XX.h&#34; // Need to modify these pins #define BMP_SCK 13 #define BMP_MISO 12 #define BMP_MOSI 11 #define BMP_CS 10 #define SEALEVELPRESSURE_HPA (1013.25) Adafruit_BMP3XX bmp; void setup() { Serial.begin(115200); while (!Serial); Serial.println(&#34;Adafruit BMP388 / BMP390 test&#34;); if (!bmp.begin_I2C()) { // hardware I2C mode, can pass in address &amp; alt Wire //if (! bmp.begin_SPI(BMP_CS)) { // hardware SPI mode //if (! bmp.begin_SPI(BMP_CS, BMP_SCK, BMP_MISO, BMP_MOSI)) { // software SPI mode Serial.println(&#34;Could not find a valid BMP3 sensor, check wiring!&#34;); while (1); } // Set up oversampling and filter initialization bmp.setTemperatureOversampling(BMP3_OVERSAMPLING_8X); bmp.setPressureOversampling(BMP3_OVERSAMPLING_4X); bmp.setIIRFilterCoeff(BMP3_IIR_FILTER_COEFF_3); bmp.setOutputDataRate(BMP3_ODR_50_HZ); } void loop() { if (! bmp.performReading()) { Serial.println(&#34;Failed to perform reading :(&#34;); return; } Serial.print(&#34;Temperature = &#34;); Serial.print(bmp.temperature); Serial.println(&#34; *C&#34;); Serial.print(&#34;Pressure = &#34;); Serial.print(bmp.pressure / 100.0); Serial.println(&#34; hPa&#34;); Serial.print(&#34;Approx. Altitude = &#34;); Serial.print(bmp.readAltitude(SEALEVELPRESSURE_HPA)); Serial.println(&#34; m&#34;); Serial.println(); delay(2000); }Link to example code on GitHub">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="Working with the BMP388">
+  <meta itemprop="description" content="Important Links# Adafruit BMP3xx (BMP388&amp;BMP390) Datasheet (it’s one datasheet for both) Adafruit BMP3xx GitHub (example code)
+Example code# Example code from Manufacturer# /*************************************************************************** This is a library for the BMP3XX temperature &amp; pressure sensor Designed specifically to work with the Adafruit BMP388 Breakout ----&gt; http://www.adafruit.com/products/3966 These sensors use I2C or SPI to communicate, 2 or 4 pins are required to interface. Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit! Written by Limor Fried &amp; Kevin Townsend for Adafruit Industries. BSD license, all text above must be included in any redistribution ***************************************************************************/ #include &lt;Wire.h&gt; #include &lt;SPI.h&gt; #include &lt;Adafruit_Sensor.h&gt; #include &#34;Adafruit_BMP3XX.h&#34; // Need to modify these pins #define BMP_SCK 13 #define BMP_MISO 12 #define BMP_MOSI 11 #define BMP_CS 10 #define SEALEVELPRESSURE_HPA (1013.25) Adafruit_BMP3XX bmp; void setup() { Serial.begin(115200); while (!Serial); Serial.println(&#34;Adafruit BMP388 / BMP390 test&#34;); if (!bmp.begin_I2C()) { // hardware I2C mode, can pass in address &amp; alt Wire //if (! bmp.begin_SPI(BMP_CS)) { // hardware SPI mode //if (! bmp.begin_SPI(BMP_CS, BMP_SCK, BMP_MISO, BMP_MOSI)) { // software SPI mode Serial.println(&#34;Could not find a valid BMP3 sensor, check wiring!&#34;); while (1); } // Set up oversampling and filter initialization bmp.setTemperatureOversampling(BMP3_OVERSAMPLING_8X); bmp.setPressureOversampling(BMP3_OVERSAMPLING_4X); bmp.setIIRFilterCoeff(BMP3_IIR_FILTER_COEFF_3); bmp.setOutputDataRate(BMP3_ODR_50_HZ); } void loop() { if (! bmp.performReading()) { Serial.println(&#34;Failed to perform reading :(&#34;); return; } Serial.print(&#34;Temperature = &#34;); Serial.print(bmp.temperature); Serial.println(&#34; *C&#34;); Serial.print(&#34;Pressure = &#34;); Serial.print(bmp.pressure / 100.0); Serial.println(&#34; hPa&#34;); Serial.print(&#34;Approx. Altitude = &#34;); Serial.print(bmp.readAltitude(SEALEVELPRESSURE_HPA)); Serial.println(&#34; m&#34;); Serial.println(); delay(2000); }Link to example code on GitHub">
+  <meta itemprop="wordCount" content="246">
+
+<title>Working with the BMP388 | ASTRA Notes</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/two-month/sensors/working-with-the-bnp3xx/">
+<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.7d3729fadf51d647867392bb57f2179d2710b93361e91b1b2f59caa11fb21754.js" integrity="sha256-fTcp&#43;t9R1keGc5K7V/IXnScQuTNh6RsbL1nKoR&#43;yF1Q=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>ASTRA Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6f7ee745eb01d60701d2583e6db10b65" class="toggle" checked />
+    <label for="section-6f7ee745eb01d60701d2583e6db10b65" class="flex">
+      <a role="button" class="">
+        Two-Month</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-360805aae7753d6b7710722836f98c54" class="toggle"  />
+    <label for="section-360805aae7753d6b7710722836f98c54" class="flex">
+      <a role="button" class="">
+        ROS2</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/two-month/ros2/about-ros/" class="">
+      About ROS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/two-month/ros2/installing-ros2-humble/" class="">
+      Installing ROS2 Humble</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ae7b997217ccb24c3ec50c90090ea0b5" class="toggle" checked />
+    <label for="section-ae7b997217ccb24c3ec50c90090ea0b5" class="flex">
+      <a role="button" class="">
+        Sensors</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/two-month/sensors/working-with-the-bnp3xx/" class="active">
+      Working with the BMP388</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/two-month/sensors/working-with-the-bno055/" class="">
+      Working with the BNO055</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Working with the BMP388</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#example-code-from-manufacturer">Example code from Manufacturer</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="important-links">Important Links<a class="anchor" href="#important-links">#</a></h1>
+<p><a href="https://cdn-learn.adafruit.com/downloads/pdf/adafruit-bmp388-bmp390-bmp3xx.pdf">Adafruit BMP3xx (BMP388&amp;BMP390) Datasheet (it&rsquo;s one datasheet for both)</a>
+<a href="https://github.com/adafruit/Adafruit_BMP3XX">Adafruit BMP3xx GitHub (example code)</a></p>
+<h1 id="example-code">Example code<a class="anchor" href="#example-code">#</a></h1>
+<h2 id="example-code-from-manufacturer">Example code from Manufacturer<a class="anchor" href="#example-code-from-manufacturer">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>  <span style="color:#75715e">/***************************************************************************
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    This is a library for the BMP3XX temperature &amp; pressure sensor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Designed specifically to work with the Adafruit BMP388 Breakout
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    ----&gt; http://www.adafruit.com/products/3966
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    These sensors use I2C or SPI to communicate, 2 or 4 pins are required
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    to interface.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Adafruit invests time and resources providing this open source code,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    please support Adafruit and open-source hardware by purchasing products
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    from Adafruit!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Written by Limor Fried &amp; Kevin Townsend for Adafruit Industries.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    BSD license, all text above must be included in any redistribution
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   ***************************************************************************/</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Wire.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>   <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;SPI.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>   <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Adafruit_Sensor.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>   <span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Adafruit_BMP3XX.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Need to modify these pins
+</span></span></span><span style="display:flex;"><span>   <span style="color:#75715e">#define BMP_SCK 13
+</span></span></span><span style="display:flex;"><span>   <span style="color:#75715e">#define BMP_MISO 12
+</span></span></span><span style="display:flex;"><span>   <span style="color:#75715e">#define BMP_MOSI 11
+</span></span></span><span style="display:flex;"><span>   <span style="color:#75715e">#define BMP_CS 10
+</span></span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">#define SEALEVELPRESSURE_HPA (1013.25)
+</span></span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   Adafruit_BMP3XX bmp;
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>     Serial.begin(<span style="color:#ae81ff">115200</span>);
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>Serial);
+</span></span><span style="display:flex;"><span>     Serial.println(<span style="color:#e6db74">&#34;Adafruit BMP388 / BMP390 test&#34;</span>);
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>bmp.begin_I2C()) {   <span style="color:#75715e">// hardware I2C mode, can pass in address &amp; alt Wire
+</span></span></span><span style="display:flex;"><span>     <span style="color:#75715e">//if (! bmp.begin_SPI(BMP_CS)) {  // hardware SPI mode  
+</span></span></span><span style="display:flex;"><span>     <span style="color:#75715e">//if (! bmp.begin_SPI(BMP_CS, BMP_SCK, BMP_MISO, BMP_MOSI)) {  // software SPI mode
+</span></span></span><span style="display:flex;"><span>       Serial.println(<span style="color:#e6db74">&#34;Could not find a valid BMP3 sensor, check wiring!&#34;</span>);
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>     <span style="color:#75715e">// Set up oversampling and filter initialization
+</span></span></span><span style="display:flex;"><span>     bmp.setTemperatureOversampling(BMP3_OVERSAMPLING_8X);
+</span></span><span style="display:flex;"><span>     bmp.setPressureOversampling(BMP3_OVERSAMPLING_4X);
+</span></span><span style="display:flex;"><span>     bmp.setIIRFilterCoeff(BMP3_IIR_FILTER_COEFF_3);
+</span></span><span style="display:flex;"><span>     bmp.setOutputDataRate(BMP3_ODR_50_HZ);
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span> bmp.performReading()) {
+</span></span><span style="display:flex;"><span>       Serial.println(<span style="color:#e6db74">&#34;Failed to perform reading :(&#34;</span>);
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     Serial.print(<span style="color:#e6db74">&#34;Temperature = &#34;</span>);
+</span></span><span style="display:flex;"><span>     Serial.print(bmp.temperature);
+</span></span><span style="display:flex;"><span>     Serial.println(<span style="color:#e6db74">&#34; *C&#34;</span>);
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>     Serial.print(<span style="color:#e6db74">&#34;Pressure = &#34;</span>);
+</span></span><span style="display:flex;"><span>     Serial.print(bmp.pressure <span style="color:#f92672">/</span> <span style="color:#ae81ff">100.0</span>);
+</span></span><span style="display:flex;"><span>     Serial.println(<span style="color:#e6db74">&#34; hPa&#34;</span>);
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>     Serial.print(<span style="color:#e6db74">&#34;Approx. Altitude = &#34;</span>);
+</span></span><span style="display:flex;"><span>     Serial.print(bmp.readAltitude(SEALEVELPRESSURE_HPA));
+</span></span><span style="display:flex;"><span>     Serial.println(<span style="color:#e6db74">&#34; m&#34;</span>);
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>     Serial.println();
+</span></span><span style="display:flex;"><span>     delay(<span style="color:#ae81ff">2000</span>);
+</span></span><span style="display:flex;"><span>   }</span></span></code></pre></div><p><a href="https://github.com/adafruit/Adafruit_BMP3XX/blob/master/examples/bmp3xx_simpletest/bmp3xx_simpletest.ino">Link to example code on GitHub</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/two-month/ros2/installing-ros2-humble/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Installing ROS2 Humble</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/two-month/sensors/working-with-the-bno055/" class="flex align-center">
+        <span>Working with the BNO055</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#example-code-from-manufacturer">Example code from Manufacturer</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

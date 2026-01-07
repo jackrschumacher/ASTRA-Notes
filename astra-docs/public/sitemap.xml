@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>http://localhost:1313/docs/two-month/</loc></url><url><loc>http://localhost:1313/docs/two-month/working-with-the-bno055/</loc></url><url><loc>http://localhost:1313/docs/two-month/working-with-the-bnp3xx/</loc></url><url><loc>http://localhost:1313/</loc></url><url><loc>http://localhost:1313/categories/</loc></url><url><loc>http://localhost:1313/docs/</loc></url><url><loc>http://localhost:1313/tags/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/docs/two-month/ros2/about-ros/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/two-month/ros2/installing-ros2-humble/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/two-month/ros2/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/two-month/sensors/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/two-month/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/two-month/sensors/working-with-the-bnp3xx/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/two-month/sensors/working-with-the-bno055/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url>
+</urlset>

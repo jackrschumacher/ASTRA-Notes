@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ASTRA Notes</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on ASTRA Notes</description>
+    <title>Sensors on ASTRA Notes</title>
+    <link>http://localhost:1313/docs/two-month/sensors/</link>
+    <description>Recent content in Sensors on ASTRA Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About ROS</title>
-      <link>http://localhost:1313/docs/two-month/ros2/about-ros/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/two-month/ros2/about-ros/</guid>
-      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Make Sure to use ROS2 Humble Hawksbill with Ubuntu 22.04 (preferably Ubuntu 22.04 LTS)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.ros.org/en/humble/index.html&#34;&gt;ROS2 Humble Hawksbill Documentation&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://releases.ubuntu.com/jammy/&#34;&gt;Download Ubuntu 22.04 LTS (Desktop recommended)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Installing ROS2 Humble</title>
-      <link>http://localhost:1313/docs/two-month/ros2/installing-ros2-humble/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/two-month/ros2/installing-ros2-humble/</guid>
-      <description>&lt;p&gt;[!NOTE|TIP|IMPORTANT|WARNING|CAUTION]&#xA;It is recommended to Install ROS2 on Linux, specifically Ubuntu 22.04 (LTS).&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Reference the &lt;a href=&#34;https://docs.ros.org/en/humble/Installation.html&#34;&gt;ROS2 Humble installation instructions&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;It is recommended to use the Debian package(s) to install ROS2 on your system&lt;/li&gt;&#xA;&lt;li&gt;It is recommended to install ros-humble-desktop, not the other versions:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  sudo apt install ros-humble-desktop&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
+    <atom:link href="http://localhost:1313/docs/two-month/sensors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Working with the BMP388</title>
       <link>http://localhost:1313/docs/two-month/sensors/working-with-the-bnp3xx/</link>

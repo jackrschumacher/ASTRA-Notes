@@ -1,4 +1,7 @@
-description:: Working with BMP sensor
+---
+title: Working with the BMP388
+weight: 1
+---
 
 # Important Links
 [Adafruit BMP3xx (BMP388&BMP390) Datasheet (it's one datasheet for both)](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-bmp388-bmp390-bmp3xx.pdf)
