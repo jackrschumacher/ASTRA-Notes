@@ -1,25 +1,27 @@
 baseURL = 'https://astra.jackrschumacher.com'
 languageCode = 'en-us'
 title = 'ASTRA Notes'
-[module]
-[[module.imports]]
-path = 'github.com/alex-shpak/hugo-book'
 
-# Theme Settings (converted from your yaml)
+# MOVE THIS TO THE TOP LEVEL (OUT OF PARAMS)
+enableGitInfo = true
+
+# ADD THIS BLOCK
+[frontmatter]
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+
+[module]
+  [[module.imports]]
+    path = 'github.com/alex-shpak/hugo-book'
+
 [params]
-  BookSection = 'docs'   # This makes the menu look in content/docs/
-  BookTheme = 'auto'     # Enables dark/light mode
-  BookSearch = true      # Enables the search bar
+  BookSection = 'docs'
+  BookTheme = 'auto'
+  BookSearch = true
   BookDateFormat = 'January 2, 2006'
-  enableGitInfo = true
+  # This specific theme parameter relies on enableGitInfo being true at the top level
   BookLastChangeLink = 'https://github.com/jackrschumacher/ASTRA-Notes/commit/{{ .GitInfo.Hash }}'
 
-# Rendering settings (needed for math/mermaid)
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'

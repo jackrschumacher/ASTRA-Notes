@@ -21,11 +21,13 @@ Example code# Example code from the Manufacturer# #include &lt;Wire.h&gt; #inclu
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2026-01-07T16:07:00-06:00">
 
 
   <meta itemprop="name" content="Working with the BNO055">
   <meta itemprop="description" content="Helpful Links# Adafruit BNO055 GitHub page with examples BNO055 Datasheet
 Example code# Example code from the Manufacturer# #include &lt;Wire.h&gt; #include &lt;Adafruit_Sensor.h&gt; #include &lt;Adafruit_BNO055.h&gt; #include &lt;utility/imumaths.h&gt; /* This driver reads raw data from the BNO055 Connections =========== Connect SCL to analog 5 Connect SDA to analog 4 Connect VDD to 3.3V DC Connect GROUND to common ground History ======= 2015/MAR/03 - First release (KTOWN) */ // Reads sample data from BNO every 100 ms #define SAMPLERATE (100) // Check I2C device address and correct line below (by default address is 0x29 or 0x28) // id, address Adafruit_BNO055 bno = Adafruit_BNO055(-1, 0x28, &amp;Wire); /**************************************************************************/ /* Arduino setup function (automatically called at startup) */ /**************************************************************************/ void setup(void) { Serial.begin(115200); while (!Serial) delay(10); // wait for serial port to open! /* Initialise the sensor */ if(!bno.begin()) { /* There was a problem detecting the BNO055 ... check your connections */ Serial.print(&#34;Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!&#34;); while(1); } delay(1000); /* Display the current temperature */ int8_t temp = bno.getTemp(); Serial.print(&#34;Current Temperature: &#34;); Serial.print(temp); Serial.println(&#34; C&#34;); Serial.println(&#34;&#34;); bno.setExtCrystalUse(true); Serial.println(&#34;Calibration status values: 0=uncalibrated, 3=fully calibrated&#34;); } /**************************************************************************/ /* Arduino loop function, called once &#39;setup&#39; is complete (your own code should go here) */ /**************************************************************************/ void loop(void) { // Possible vector values can be: // - VECTOR_ACCELEROMETER - m/s^2 // - VECTOR_MAGNETOMETER - uT // - VECTOR_GYROSCOPE - rad/s // - VECTOR_EULER - degrees // - VECTOR_LINEARACCEL - m/s^2 // - VECTOR_GRAVITY - m/s^2 imu::Vector&lt;3&gt; euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER); /* Display the floating point data */ Serial.print(&#34;X: &#34;); Serial.print(euler.x()); Serial.print(&#34; Y: &#34;); Serial.print(euler.y()); Serial.print(&#34; Z: &#34;); Serial.print(euler.z()); Serial.print(&#34;\t\t&#34;); /* // Quaternion data imu::Quaternion quat = bno.getQuat(); Serial.print(&#34;qW: &#34;); Serial.print(quat.w(), 4); Serial.print(&#34; qX: &#34;); Serial.print(quat.x(), 4); Serial.print(&#34; qY: &#34;); Serial.print(quat.y(), 4); Serial.print(&#34; qZ: &#34;); Serial.print(quat.z(), 4); Serial.print(&#34;\t\t&#34;); */ /* Display calibration status for each sensor. */ uint8_t system, gyro, accel, mag = 0; bno.getCalibration(&amp;system, &amp;gyro, &amp;accel, &amp;mag); Serial.print(&#34;CALIBRATION: Sys=&#34;); Serial.print(system, DEC); Serial.print(&#34; Gyro=&#34;); Serial.print(gyro, DEC); Serial.print(&#34; Accel=&#34;); Serial.print(accel, DEC); Serial.print(&#34; Mag=&#34;); Serial.println(mag, DEC); delay(BNO055_SAMPLERATE_DELAY_MS); }Link to example code on GitHub">
+  <meta itemprop="dateModified" content="2026-01-07T16:07:00-06:00">
   <meta itemprop="wordCount" content="336">
 
 <title>Working with the BNO055 | ASTRA Notes</title>
@@ -460,6 +462,10 @@ Example code# Example code from the Manufacturer# #include &lt;Wire.h&gt; #inclu
   <div class="flex flex-wrap justify-between">
 
 <div>
+<a class="flex align-center" href="https://github.com/jackrschumacher/ASTRA-Notes/commit/95a1cf79446ad9ad0d3727a11bf2bb5c8401be6d" title='Last modified by Jack Schumacher | January 7, 2026' target="_blank" rel="noopener">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>January 7, 2026</span>
+  </a>
 
 </div>
 
