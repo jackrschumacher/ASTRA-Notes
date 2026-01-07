@@ -1,63 +1,54 @@
 name: Deploy Hugo Site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - main
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# Default to bash
 defaults:
   run:
     shell: bash
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     env:
-      # Control the version here. 
-      # If you need to upgrade later, just change this number.
-      HUGO_VERSION: 0.128.0 
+      HUGO_VERSION: 0.128.0
       HUGO_ENV: production
-      
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive # Fetch Hugo themes/modules
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          # FIX: Use the variable defined above instead of 'latest'
-          hugo-version: ${{ env.HUGO_VERSION }} 
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
       - name: Build with Hugo
+        # Tells GitHub to look inside your specific folder for hugo.toml
+        working-directory: ./astra-docs
         run: hugo --minify
-        # Ensure this folder matches exactly where your config file is
-        working-directory: ./astra-docs 
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Ensure this path matches the output of the build step
-          path: ./astra-docs/public 
+          # Points to the public folder generated inside astra-docs
+          path: ./astra-docs/public
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
