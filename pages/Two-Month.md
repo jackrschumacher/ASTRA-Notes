@@ -1,8 +1,0 @@
-- Contains information relating to Two-Month for ASTRA
-	- Collections of links,etc
--
-- [[Two-Month Environment setup]]
-- [[Two-Month ROS Notes]]
-- [[Two-Month Embedded]]
-- [[Two-Month Basestation]]
-- [[Two-Month Electrical]]

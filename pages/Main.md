@@ -1,5 +1,0 @@
-- SHC ASTRA personal documentation
-- [[Two-Month]]
-- [[ROS2]]
-- [[Embedded]]
-- [[README]]

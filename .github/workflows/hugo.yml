@@ -1,0 +1,64 @@
+name: Deploy Hugo Site to Pages
+
+on:
+  push:
+    branches:
+      - main  # Set a different branch if yours is 'master'
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.128.0 # Specify a recent Hugo version
+      # Important: Tell Hugo to use the 'extended' version for the Book theme
+      HUGO_ENV: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive # Fetch Hugo themes/modules
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build with Hugo
+        run: hugo --minify
+        working-directory: ./uahnotes-md # <--- POINTS TO YOUR SUBDIRECTORY
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./uahnotes-md/public # <--- UPLOADS THE BUILT SITE
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
