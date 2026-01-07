@@ -44,12 +44,12 @@ jobs:
 
       - name: Build with Hugo
         run: hugo --minify
-        working-directory: ./uahnotes-md # <--- POINTS TO YOUR SUBDIRECTORY
+        working-directory: ./aastra-docs # <--- POINTS TO YOUR SUBDIRECTORY
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./uahnotes-md/public # <--- UPLOADS THE BUILT SITE
+          path: ./astra-docs/public # <--- UPLOADS THE BUILT SITE
 
   # Deployment job
   deploy:
