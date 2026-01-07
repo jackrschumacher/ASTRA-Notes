@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biosensor on ASTRA Notes</title>
+    <link>http://localhost:1313/docs/2025-2026/biosensor/</link>
+    <description>Recent content in Biosensor on ASTRA Notes</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/2025-2026/biosensor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Embedded summary</title>
+      <link>http://localhost:1313/docs/2025-2026/biosensor/embedded-summary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2025-2026/biosensor/embedded-summary/</guid>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;a class=&#34;anchor&#34; href=&#34;#summary&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
