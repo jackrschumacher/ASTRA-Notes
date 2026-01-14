@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meetings on ASTRA Notes</title>
-    <link>http://localhost:1313/docs/2025-2026/biosensor/meetings/</link>
+    <link>http://localhost:1313/docs/2025-2026/meetings/</link>
     <description>Recent content in Meetings on ASTRA Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/docs/2025-2026/biosensor/meetings/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/docs/2025-2026/meetings/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>http://localhost:1313/docs/2025-2026/biosensor/meetings/1-13-26/</link>
+      <title>1-13-26</title>
+      <link>http://localhost:1313/docs/2025-2026/meetings/1-13-26/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/2025-2026/biosensor/meetings/1-13-26/</guid>
-      <description></description>
+      <guid>http://localhost:1313/docs/2025-2026/meetings/1-13-26/</guid>
+      <description>&lt;h2 id=&#34;work-done&#34;&gt;Work done&lt;a class=&#34;anchor&#34; href=&#34;#work-done&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Working on creating two versions of the code that will then come together&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;One that is just the bare essentials for SAR filming- dont want to overcomplicate and run into issues&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Then can be easily extended with CAN and LED features&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LED features could probably be added to this bare-bones code, but we need a protoboard and wiring for this&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>http://localhost:1313/docs/2025-2026/biosensor/meetings/1-7-26/</link>
+      <title>1-7-26</title>
+      <link>http://localhost:1313/docs/2025-2026/meetings/1-7-26/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/2025-2026/biosensor/meetings/1-7-26/</guid>
+      <guid>http://localhost:1313/docs/2025-2026/meetings/1-7-26/</guid>
       <description>&lt;h1 id=&#34;meeting-1726&#34;&gt;Meeting 1/7/26&lt;a class=&#34;anchor&#34; href=&#34;#meeting-1726&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;embedded-progress&#34;&gt;Embedded progress&lt;a class=&#34;anchor&#34; href=&#34;#embedded-progress&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Have taken a look at the old code and have started to modify it for this year&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Removed stepper motor library&lt;/li&gt;&#xA;&lt;li&gt;Removed math library - will see if we need to readd this for calculating the amount to be put into each tube&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;my-questions&#34;&gt;My Questions&lt;a class=&#34;anchor&#34; href=&#34;#my-questions&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;What type of ESP32 are we using&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;ESP32-S3?&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Or are we just using the ESP32 devkit&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;We are planning on using the ESP32 DevKit V1&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/ESP-WROOM-32-Development-Microcontroller-Integrated-Compatible/dp/B0CR5Y2JVD/ref=pd_lpo_d_sccl_1/144-1649755-4875425?pd_rd_w=ZzRhb&amp;amp;content-id=amzn1.sym.4c8c52db-06f8-4e42-8e56-912796f2ea6c&amp;amp;pf_rd_p=4c8c52db-06f8-4e42-8e56-912796f2ea6c&amp;amp;pf_rd_r=6JMYSDGY8VGG96XDRHF9&amp;amp;pd_rd_wg=N244w&amp;amp;pd_rd_r=0d969748-0578-4d63-a1eb-68ea210e4dcf&amp;amp;pd_rd_i=B08D5ZD528&amp;amp;th=1&#34;&gt;It is probably this one&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;a class=&#34;anchor&#34; href=&#34;#todo&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Import astravican file into the project&lt;/p&gt;</description>
     </item>
   </channel>
