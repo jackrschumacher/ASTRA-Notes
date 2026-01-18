@@ -14,7 +14,7 @@ void handleSerial() { const int BUFF_SIZE = 32; // make it big enough to hold yo
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/example/embedded/serial-command-parser/">
   <meta property="og:site_name" content="ASTRA Notes">
-  <meta property="og:title" content="ASTRA Notes">
+  <meta property="og:title" content="Serial Command Parser">
   <meta property="og:description" content="Serial Command Parser# From: https://forum.arduino.cc/t/parsing-serial-commands-programs-string-stuff/176213/2
 void handleSerial() { const int BUFF_SIZE = 32; // make it big enough to hold your longest command static char buffer[BUFF_SIZE&#43;1]; // &#43;1 allows space for the null terminator static int length = 0; // number of characters currently in the buffer if(Serial.available()) { char c = Serial.read(); if((c == &#39;\r&#39;) || (c == &#39;\n&#39;)) { // end-of-line received if(length &gt; 0) { handleReceivedMessage(buffer); } length = 0; } else { if(length &lt; BUFF_SIZE) { buffer[length&#43;&#43;] = c; // append the received character to the array buffer[length] = 0; // append the null terminator } else { // buffer full - discard the received character } } } } void handleReceivedMessage(char *msg) { ... }">
   <meta property="og:locale" content="en_us">
@@ -23,7 +23,7 @@ void handleSerial() { const int BUFF_SIZE = 32; // make it big enough to hold yo
     <meta property="article:modified_time" content="2026-01-11T17:18:28-06:00">
 
 
-  <meta itemprop="name" content="ASTRA Notes">
+  <meta itemprop="name" content="Serial Command Parser">
   <meta itemprop="description" content="Serial Command Parser# From: https://forum.arduino.cc/t/parsing-serial-commands-programs-string-stuff/176213/2
 void handleSerial() { const int BUFF_SIZE = 32; // make it big enough to hold your longest command static char buffer[BUFF_SIZE&#43;1]; // &#43;1 allows space for the null terminator static int length = 0; // number of characters currently in the buffer if(Serial.available()) { char c = Serial.read(); if((c == &#39;\r&#39;) || (c == &#39;\n&#39;)) { // end-of-line received if(length &gt; 0) { handleReceivedMessage(buffer); } length = 0; } else { if(length &lt; BUFF_SIZE) { buffer[length&#43;&#43;] = c; // append the received character to the array buffer[length] = 0; // append the null terminator } else { // buffer full - discard the received character } } } } void handleReceivedMessage(char *msg) { ... }">
   <meta itemprop="dateModified" content="2026-01-11T17:18:28-06:00">
@@ -37,7 +37,7 @@ void handleSerial() { const int BUFF_SIZE = 32; // make it big enough to hold yo
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.b96edff1f10231db421f7e0f0f48d2226c50e1a93d306838d85b16337e880088.js" integrity="sha256-uW7f8fECMdtCH34PD0jSImxQ4ak9MGg42FsWM36IAIg=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.c5c2954c03622a65a32aef46ce9e022c552eb344fe3e2bd770e0690f183d76f3.js" integrity="sha256-xcKVTANiKmWjKu9Gzp4CLFUus0T&#43;PivXcOBpDxg9dvM=" crossorigin="anonymous"></script>
 
 
 

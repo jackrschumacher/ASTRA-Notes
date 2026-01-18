@@ -3,7 +3,7 @@ name: Deploy Hugo Site to Pages
 on:
   push:
     branches:
-      - master  # Set a different branch if yours is 'master'
+      - master
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -27,29 +27,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.128.0 # Specify a recent Hugo version
-      # Important: Tell Hugo to use the 'extended' version for the Book theme
       HUGO_ENV: production
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive # Fetch Hugo themes/modules
+          fetch-depth: 0       # FIX: Fetches all history so Hugo can access correct Git commit dates
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: 'latest' # Automatically uses the latest stable Hugo version
           extended: true
 
       - name: Build with Hugo
         run: hugo --minify
-        working-directory: ./astra-docs # <--- POINTS TO YOUR SUBDIRECTORY
+        working-directory: ./astra-docs # Points to your subdirectory
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./astra-docs/public # <--- UPLOADS THE BUILT SITE
+          path: ./astra-docs/public # Uploads the built site
 
   # Deployment job
   deploy:
