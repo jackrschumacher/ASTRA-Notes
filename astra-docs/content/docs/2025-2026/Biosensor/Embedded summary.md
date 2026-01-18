@@ -1,7 +1,6 @@
 ---
 title: Embedded summary
 weight: 1
-date: 1/18/2026
 ---
 
 # Summary

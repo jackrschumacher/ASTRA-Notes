@@ -1,8 +1,3 @@
----
-title: Serial Command Parser
-weight: 1
-date: 1/12/2026
----
 
 # Serial Command Parser
 
