@@ -6,7 +6,7 @@ weight: 1
 
 Use this code for reference as needed.
 
-```c++
+```c
 /**
  * @file DigitMainMCU.h
  * @author David Sharpe (ds0196@uah.edu)

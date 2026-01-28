@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prototypes on ASTRA Notes</title>
+    <link>http://localhost:1313/docs/2025-2026/biosensor/prototypes/</link>
+    <description>Recent content in Prototypes on ASTRA Notes</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/2025-2026/biosensor/prototypes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ESP32-S3</title>
+      <link>http://localhost:1313/docs/2025-2026/biosensor/prototypes/esp32s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2025-2026/biosensor/prototypes/esp32s3/</guid>
+      <description>&lt;h2 id=&#34;esp32-s3-pinout&#34;&gt;ESP32 S3 pinout&lt;a class=&#34;anchor&#34; href=&#34;#esp32-s3-pinout&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/ESP32-S3_DevKitC-1_pinlayout.jpg&#34; alt=&#34;ESP32-S3 Devkit&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Valve1: 1&lt;/p&gt;&#xA;&lt;p&gt;Valve2: 2&lt;/p&gt;&#xA;&lt;p&gt;Valve3: 42&lt;/p&gt;&#xA;&lt;p&gt;Distributor1: 41&lt;/p&gt;&#xA;&lt;p&gt;Distributor2: 40&lt;/p&gt;&#xA;&lt;p&gt;Distributor3: 39  - Commented out because of S3 timing issue&lt;/p&gt;&#xA;&lt;p&gt;Chemical1: 38&lt;/p&gt;&#xA;&lt;p&gt;Chemical2: 37&lt;/p&gt;&#xA;&lt;p&gt;Chemical3: 36&lt;/p&gt;&#xA;&lt;h2 id=&#34;esp32-s3-with-many-servos-links&#34;&gt;ESP32 S3 with many servos links&lt;a class=&#34;anchor&#34; href=&#34;#esp32-s3-with-many-servos-links&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://esp32.com/viewtopic.php?t=9271&#34;&gt;https://esp32.com/viewtopic.php?t=9271&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
