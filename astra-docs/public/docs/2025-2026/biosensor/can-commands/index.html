@@ -8,55 +8,28 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ESP32 S3 pinout# Valve1: 1
-Valve2: 2
-Valve3: 42
-Distributor1: 41
-Distributor2: 40
-Distributor3: 39 - Commented out because of S3 timing issue
-Chemical1: 38
-Chemical2: 37
-Chemical3: 36
-ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271 ">
+<meta name="description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/2025-2026/biosensor/prototypes/esp32s3/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/2025-2026/biosensor/can-commands/">
   <meta property="og:site_name" content="ASTRA Notes">
-  <meta property="og:title" content="ESP32-S3">
-  <meta property="og:description" content="ESP32 S3 pinout# Valve1: 1
-Valve2: 2
-Valve3: 42
-Distributor1: 41
-Distributor2: 40
-Distributor3: 39 - Commented out because of S3 timing issue
-Chemical1: 38
-Chemical2: 37
-Chemical3: 36
-ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
+  <meta property="og:title" content="CAN commands">
+  <meta property="og:description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2026-01-27T20:05:15-06:00">
+    <meta property="article:modified_time" content="2026-01-28T19:46:16-06:00">
 
 
-  <meta itemprop="name" content="ESP32-S3">
-  <meta itemprop="description" content="ESP32 S3 pinout# Valve1: 1
-Valve2: 2
-Valve3: 42
-Distributor1: 41
-Distributor2: 40
-Distributor3: 39 - Commented out because of S3 timing issue
-Chemical1: 38
-Chemical2: 37
-Chemical3: 36
-ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
-  <meta itemprop="dateModified" content="2026-01-27T20:05:15-06:00">
-  <meta itemprop="wordCount" content="36">
+  <meta itemprop="name" content="CAN commands">
+  <meta itemprop="description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at">
+  <meta itemprop="dateModified" content="2026-01-28T19:46:16-06:00">
+  <meta itemprop="wordCount" content="80">
 
-<title>ESP32-S3 | ASTRA Notes</title>
+<title>CAN commands | ASTRA Notes</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/docs/2025-2026/biosensor/prototypes/esp32s3/">
+<link rel="canonical" href="http://localhost:1313/docs/2025-2026/biosensor/can-commands/">
 <link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
 
 
@@ -164,7 +137,7 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
   
 
   
-    <a href="/docs/2025-2026/biosensor/can-commands/" class="">
+    <a href="/docs/2025-2026/biosensor/can-commands/" class="active">
       CAN commands</a>
   
 
@@ -192,7 +165,7 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
   
 
   
-    <input type="checkbox" id="section-82d6151fc137eeca2b5cf82cc58d6f46" class="toggle" checked />
+    <input type="checkbox" id="section-82d6151fc137eeca2b5cf82cc58d6f46" class="toggle"  />
     <label for="section-82d6151fc137eeca2b5cf82cc58d6f46" class="flex">
       <a role="button" class="">
         Prototypes</a>
@@ -210,7 +183,7 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
   
 
   
-    <a href="/docs/2025-2026/biosensor/prototypes/esp32s3/" class="active">
+    <a href="/docs/2025-2026/biosensor/prototypes/esp32s3/" class="">
       ESP32-S3</a>
   
 
@@ -517,7 +490,7 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
     <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>ESP32-S3</h3>
+  <h3>CAN commands</h3>
 
   <label for="toc-control">
     
@@ -533,8 +506,14 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#esp32-s3-pinout">ESP32 S3 pinout</a></li>
-    <li><a href="#esp32-s3-with-many-servos-links">ESP32 S3 with many servos links</a></li>
+    <li><a href="#starting-can-relay-mode">Starting CAN relay mode</a></li>
+    <li><a href="#ping-command">Ping command</a></li>
+    <li><a href="#motor-movement">Motor Movement</a>
+      <ul>
+        <li><a href="#servo-movement">Servo Movement</a></li>
+        <li><a href="#revneo-550-motor-movement">REV/NEO 550 motor movement</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -547,20 +526,39 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
 
       
       
-  <article class="markdown book-article"><h2 id="esp32-s3-pinout">ESP32 S3 pinout<a class="anchor" href="#esp32-s3-pinout">#</a></h2>
-<p><img src="/images/ESP32-S3_DevKitC-1_pinlayout.jpg" alt="Test" /></p>
-<p>Valve1: 1</p>
-<p>Valve2: 2</p>
-<p>Valve3: 42</p>
-<p>Distributor1: 41</p>
-<p>Distributor2: 40</p>
-<p>Distributor3: 39  - Commented out because of S3 timing issue</p>
-<p>Chemical1: 38</p>
-<p>Chemical2: 37</p>
-<p>Chemical3: 36</p>
-<h2 id="esp32-s3-with-many-servos-links">ESP32 S3 with many servos links<a class="anchor" href="#esp32-s3-with-many-servos-links">#</a></h2>
+  <article class="markdown book-article"><h1 id="citadel-can-commands">Citadel CAN commands<a class="anchor" href="#citadel-can-commands">#</a></h1>
+<h2 id="starting-can-relay-mode">Starting CAN relay mode<a class="anchor" href="#starting-can-relay-mode">#</a></h2>
+<pre tabindex="0"><code>can_relay_mode,on</code></pre><h2 id="ping-command">Ping command<a class="anchor" href="#ping-command">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>can_relay_tovic,citadel,<span style="color:#ae81ff">1</span></span></span></code></pre></div><h2 id="motor-movement">Motor Movement<a class="anchor" href="#motor-movement">#</a></h2>
+<h3 id="servo-movement">Servo Movement<a class="anchor" href="#servo-movement">#</a></h3>
+<h4 id="structure">Structure:<a class="anchor" href="#structure">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>can_relay_tovic,citadel,<span style="color:#ae81ff">40</span>,[group],[angle1],[angle2],[angle3]</span></span></code></pre></div><ul>
+<li><strong>can_relay_tovic</strong> - call the can_relay_tovic command</li>
+<li><strong>citadel</strong> - call the citadel mcu</li>
+<li><strong>40</strong> - CAN command</li>
+<li><strong>Group</strong>
 <ul>
-<li><a href="https://esp32.com/viewtopic.php?t=9271">https://esp32.com/viewtopic.php?t=9271</a></li>
+<li>valves (1,2,3)</li>
+<li>distributor (1,2,3)</li>
+<li>chemical (1,2,3)</li>
+</ul>
+</li>
+<li><strong>Angles</strong>
+<ul>
+<li>Angle to move valve servos</li>
+<li>Angle to move distributor servos</li>
+<li>Angle to move chemical servos</li>
+</ul>
+</li>
+</ul>
+<h4 id="example">Example:<a class="anchor" href="#example">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>can_relay_tovic,citadel,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">30</span></span></span></code></pre></div><h3 id="revneo-550-motor-movement">REV/NEO 550 motor movement<a class="anchor" href="#revneo-550-motor-movement">#</a></h3>
+<h4 id="structure-1">Structure<a class="anchor" href="#structure-1">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>can_relay_tovic,citadel,<span style="color:#ae81ff">19</span>,[speed]</span></span></code></pre></div><ul>
+<li><strong>citadel</strong> - call the citadel MCU</li>
+<li><strong>19</strong> - CAN command</li>
+<li><strong>Speed</strong> - speed that the motor should run at</li>
+<li></li>
 </ul>
 </article>
  
@@ -571,9 +569,9 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
   <div class="flex flex-wrap justify-between">
 
 <div>
-<a class="flex align-center" href="https://github.com/jackrschumacher/ASTRA-Notes/commit/44c32951b27385e9325a632cb9b924b1d4cb0bbf" title='Last modified by Jack Schumacher | January 27, 2026' target="_blank" rel="noopener">
+<a class="flex align-center" href="https://github.com/jackrschumacher/ASTRA-Notes/commit/5028a3c35ab0cd3caed531eb2f43f3a7bbb450e8" title='Last modified by Jack Schumacher | January 28, 2026' target="_blank" rel="noopener">
     <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
-    <span>January 27, 2026</span>
+    <span>January 28, 2026</span>
   </a>
 
 </div>
@@ -594,16 +592,16 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
   <div class="flex flex-wrap justify-between">
     <span>
     
-      <a href="/docs/2025-2026/biosensor/embedded-summary/" class="flex align-center">
+      <a href="/docs/2025-2026/biosensor/2025-bio-code/" class="flex align-center">
         <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
-        <span>Embedded summary</span>
+        <span>2025 Biosensor Code</span>
       </a>
     
     </span>
     <span>
     
-      <a href="/docs/2025-2026/meetings/1-13-26/" class="flex align-center">
-        <span>1-13-26</span>
+      <a href="/docs/2025-2026/biosensor/embedded-summary/" class="flex align-center">
+        <span>Embedded summary</span>
         <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
       </a>
     
@@ -643,8 +641,14 @@ ESP32 S3 with many servos links# https://esp32.com/viewtopic.php?t=9271">
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#esp32-s3-pinout">ESP32 S3 pinout</a></li>
-    <li><a href="#esp32-s3-with-many-servos-links">ESP32 S3 with many servos links</a></li>
+    <li><a href="#starting-can-relay-mode">Starting CAN relay mode</a></li>
+    <li><a href="#ping-command">Ping command</a></li>
+    <li><a href="#motor-movement">Motor Movement</a>
+      <ul>
+        <li><a href="#servo-movement">Servo Movement</a></li>
+        <li><a href="#revneo-550-motor-movement">REV/NEO 550 motor movement</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

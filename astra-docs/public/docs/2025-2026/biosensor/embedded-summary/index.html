@@ -11,6 +11,7 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Summary# 9 servos One NEO 550 functioning as the fan motor Resources# Equipment Links
 ESP-32-S3 (3 pack)
 ESP-32 Devkit V1
+ESP-32 Devkit V1 GPIO/PWM pins# Avaliable Pins with PWM, IO and no board functions# 14 27 26 25 33 32 23 22 21 19 18 5 17 16 4 ESP-32 S3 pins# We are currently not using this board due to PWM limitations. These pins are in case this issue can be resolved
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
@@ -19,19 +20,21 @@ ESP-32 Devkit V1
   <meta property="og:title" content="Embedded summary">
   <meta property="og:description" content="Summary# 9 servos One NEO 550 functioning as the fan motor Resources# Equipment Links
 ESP-32-S3 (3 pack)
-ESP-32 Devkit V1">
+ESP-32 Devkit V1
+ESP-32 Devkit V1 GPIO/PWM pins# Avaliable Pins with PWM, IO and no board functions# 14 27 26 25 33 32 23 22 21 19 18 5 17 16 4 ESP-32 S3 pins# We are currently not using this board due to PWM limitations. These pins are in case this issue can be resolved">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2026-01-18T16:26:15-06:00">
+    <meta property="article:modified_time" content="2026-01-28T19:46:16-06:00">
 
 
   <meta itemprop="name" content="Embedded summary">
   <meta itemprop="description" content="Summary# 9 servos One NEO 550 functioning as the fan motor Resources# Equipment Links
 ESP-32-S3 (3 pack)
-ESP-32 Devkit V1">
-  <meta itemprop="dateModified" content="2026-01-18T16:26:15-06:00">
-  <meta itemprop="wordCount" content="20">
+ESP-32 Devkit V1
+ESP-32 Devkit V1 GPIO/PWM pins# Avaliable Pins with PWM, IO and no board functions# 14 27 26 25 33 32 23 22 21 19 18 5 17 16 4 ESP-32 S3 pins# We are currently not using this board due to PWM limitations. These pins are in case this issue can be resolved">
+  <meta itemprop="dateModified" content="2026-01-28T19:46:16-06:00">
+  <meta itemprop="wordCount" content="99">
 
 <title>Embedded summary | ASTRA Notes</title>
 <link rel="icon" href="/favicon.png" >
@@ -41,7 +44,7 @@ ESP-32 Devkit V1">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.dde89278c9547d1d6985193659babb8a06bd544be9ef6c0a26e2410e7b09558c.js" integrity="sha256-3eiSeMlUfR1phRk2Wbq7iga9VEvp72wKJuJBDnsJVYw=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.42df50a66c55017f305662554e1c8571f36ca8f25ab8d0ecbe8c3e6328d8ea81.js" integrity="sha256-Qt9QpmxVAX8wVmJVThyFcfNsqPJauNDsvow&#43;YyjY6oE=" crossorigin="anonymous"></script>
 
 
 
@@ -132,6 +135,20 @@ ESP-32 Devkit V1">
   
     <a href="/docs/2025-2026/biosensor/2025-bio-code/" class="">
       2025 Biosensor Code</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2025-2026/biosensor/can-commands/" class="">
+      CAN commands</a>
   
 
         </li>
@@ -499,7 +516,13 @@ ESP-32 Devkit V1">
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#resources">Resources</a></li>
+    <li><a href="#resources">Resources</a>
+      <ul>
+        <li><a href="#esp-32-devkit-v1-gpiopwm-pins">ESP-32 Devkit V1 GPIO/PWM pins</a></li>
+        <li><a href="#avaliable-pins-with-pwm-io-and-no-board-functions">Avaliable Pins with PWM, IO and no board functions</a></li>
+        <li><a href="#esp-32-s3-pins">ESP-32 S3 pins</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -521,7 +544,38 @@ ESP-32 Devkit V1">
 <p>Equipment Links</p>
 <p><a href="https://www.amazon.com/dp/B0F8NDRQQK?ref=ppx_yo2ov_dt_b_fed_asin_title">ESP-32-S3 (3 pack)</a></p>
 <p><a href="https://www.amazon.com/AITRIP-ESP-WROOM-32-Development-Microcontroller-Compatible/dp/B0DF2YJSHN/ref=sr_1_2?crid=2QQX1NIA0UNNW&amp;dib=eyJ2IjoiMSJ9.kdZ5Zt_HmSZ7Mkirf5g0bLPlB4Xkex-_FIzfpr2h7AjdW3ZQnSEYFhYFGiOFdNzNz2Q9fdKZHdP-J_uhvKIvrYkTzThMgD08OA8U0HiTIIB--eKqtlqrWGeR-rrLeKFl3wvLaw32rAstsYGXDc1v3P7HFdZcpHDU8ljxwJMIjs1gXJ_hzWVTd6ihydBviNhD8Hd-0Id6E5nyJnMS6Acml3b9a9hzHCXfS4AHiTfnpJJNTtFfy3WcM3YmGKR7BIcB5FJ60vgfXcMvu4avpTsuBlE0uo2Q7JUpMqGevxisVQQ.k0ZazkDqLGm9ticndLtfSU5ZKW4cHAdYqyIAtI7JXic&amp;dib_tag=se&amp;keywords=esp-32%2Bdevelopment%2Bboard%2Busb-c&amp;qid=1768773850&amp;s=electronics&amp;sprefix=%2Celectronics%2C125&amp;sr=1-2&amp;th=1">ESP-32 Devkit V1</a></p>
-</article>
+<h3 id="esp-32-devkit-v1-gpiopwm-pins">ESP-32 Devkit V1 GPIO/PWM pins<a class="anchor" href="#esp-32-devkit-v1-gpiopwm-pins">#</a></h3>
+<h3 id="avaliable-pins-with-pwm-io-and-no-board-functions">Avaliable Pins with PWM, IO and no board functions<a class="anchor" href="#avaliable-pins-with-pwm-io-and-no-board-functions">#</a></h3>
+<ul>
+<li>14</li>
+<li>27</li>
+<li>26</li>
+<li>25</li>
+<li>33</li>
+<li>32</li>
+<li>23</li>
+<li>22</li>
+<li>21</li>
+<li>19</li>
+<li>18</li>
+<li>5</li>
+<li>17</li>
+<li>16</li>
+<li>4</li>
+</ul>
+<h3 id="esp-32-s3-pins">ESP-32 S3 pins<a class="anchor" href="#esp-32-s3-pins">#</a></h3>
+<blockquote class='book-hint warning'>
+<p>We are currently not using this board due to PWM limitations. These pins are in case this issue can be resolved</p></blockquote><pre tabindex="0"><code>Valve1: 1
+Valve2: 2
+Valve3: 42
+
+Distributor1: 41
+Distributor2: 40
+Distributor3: 39  - Commented out because of S3 timing issue
+
+Chemical1: 38
+Chemical2: 37
+Chemical3: 36</code></pre></article>
  
       
 
@@ -530,9 +584,9 @@ ESP-32 Devkit V1">
   <div class="flex flex-wrap justify-between">
 
 <div>
-<a class="flex align-center" href="https://github.com/jackrschumacher/ASTRA-Notes/commit/aa73e6e946c5edfd6222b0e0828362b6c3d1d029" title='Last modified by Jack Schumacher | January 18, 2026' target="_blank" rel="noopener">
+<a class="flex align-center" href="https://github.com/jackrschumacher/ASTRA-Notes/commit/5028a3c35ab0cd3caed531eb2f43f3a7bbb450e8" title='Last modified by Jack Schumacher | January 28, 2026' target="_blank" rel="noopener">
     <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
-    <span>January 18, 2026</span>
+    <span>January 28, 2026</span>
   </a>
 
 </div>
@@ -553,9 +607,9 @@ ESP-32 Devkit V1">
   <div class="flex flex-wrap justify-between">
     <span>
     
-      <a href="/docs/2025-2026/biosensor/2025-bio-code/" class="flex align-center">
+      <a href="/docs/2025-2026/biosensor/can-commands/" class="flex align-center">
         <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
-        <span>2025 Biosensor Code</span>
+        <span>CAN commands</span>
       </a>
     
     </span>
@@ -602,7 +656,13 @@ ESP-32 Devkit V1">
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#resources">Resources</a></li>
+    <li><a href="#resources">Resources</a>
+      <ul>
+        <li><a href="#esp-32-devkit-v1-gpiopwm-pins">ESP-32 Devkit V1 GPIO/PWM pins</a></li>
+        <li><a href="#avaliable-pins-with-pwm-io-and-no-board-functions">Avaliable Pins with PWM, IO and no board functions</a></li>
+        <li><a href="#esp-32-s3-pins">ESP-32 S3 pins</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

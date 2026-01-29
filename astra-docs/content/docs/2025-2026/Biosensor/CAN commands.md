@@ -15,14 +15,16 @@ can_relay_mode,on
 
 ## Ping command
 
-```c++
+```
 can_relay_tovic,citadel,1
 ```
 
-## Motor Testing
-### Structure:
+## Motor Movement
+### Servo Movement
 
-```c++
+#### Structure:
+
+```
 can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3]
 ```
 - **can_relay_tovic** - call the can_relay_tovic command
@@ -37,8 +39,45 @@ can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3]
   - Angle to move distributor servos
   - Angle to move chemical servos
 
-### Example:
+#### Example:
 
-```c++
+```
 can_relay_tovic,citadel,40,1,30,30,30
 ```
+
+### REV/NEO 550 motor movement
+
+#### Structure
+
+```
+can_relay_tovic,citadel,19,[speed]
+```
+
+- **citadel** - call the citadel MCU
+- **19** - CAN command
+- **Speed** - speed that the motor should run at
+
+#### Example
+
+```
+can_relay_tovic,19,20
+```
+
+### Other Commands
+
+#### Ping
+
+**Expected response:** pong
+
+```
+can_relay_tovic,citadel,CMD_PING
+```
+
+#### CMD_REV_STOP
+
+**Expected response:** stop REV motor
+
+```
+can_relay_tovic,citadel,CMD_REV_STOP
+```
+
