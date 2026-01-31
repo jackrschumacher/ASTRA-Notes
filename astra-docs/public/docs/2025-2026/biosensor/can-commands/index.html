@@ -8,23 +8,24 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at ">
+<meta name="description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at Example# can_relay_tovic,19,20Other Commands# Ping# Expected response: pong
+">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/2025-2026/biosensor/can-commands/">
   <meta property="og:site_name" content="ASTRA Notes">
   <meta property="og:title" content="CAN commands">
-  <meta property="og:description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at">
+  <meta property="og:description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at Example# can_relay_tovic,19,20Other Commands# Ping# Expected response: pong">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2026-01-28T19:46:16-06:00">
+    <meta property="article:modified_time" content="2026-01-28T20:11:57-06:00">
 
 
   <meta itemprop="name" content="CAN commands">
-  <meta itemprop="description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at">
-  <meta itemprop="dateModified" content="2026-01-28T19:46:16-06:00">
-  <meta itemprop="wordCount" content="80">
+  <meta itemprop="description" content="Citadel CAN commands# Starting CAN relay mode# can_relay_mode,onPing command# can_relay_tovic,citadel,1Motor Movement# Servo Movement# Structure:# can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3] can_relay_tovic - call the can_relay_tovic command citadel - call the citadel mcu 40 - CAN command Group valves (1,2,3) distributor (1,2,3) chemical (1,2,3) Angles Angle to move valve servos Angle to move distributor servos Angle to move chemical servos Example:# can_relay_tovic,citadel,40,1,30,30,30REV/NEO 550 motor movement# Structure# can_relay_tovic,citadel,19,[speed] citadel - call the citadel MCU 19 - CAN command Speed - speed that the motor should run at Example# can_relay_tovic,19,20Other Commands# Ping# Expected response: pong">
+  <meta itemprop="dateModified" content="2026-01-28T20:11:57-06:00">
+  <meta itemprop="wordCount" content="94">
 
 <title>CAN commands | ASTRA Notes</title>
 <link rel="icon" href="/favicon.png" >
@@ -34,7 +35,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.42df50a66c55017f305662554e1c8571f36ca8f25ab8d0ecbe8c3e6328d8ea81.js" integrity="sha256-Qt9QpmxVAX8wVmJVThyFcfNsqPJauNDsvow&#43;YyjY6oE=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.b17916bf505e2a2a5eae0268ec865dd80019f1dc1ff9645d4820d3600716e9e3.js" integrity="sha256-sXkWv1BeKipergJo7IZd2AAZ8dwf&#43;WRdSCDTYAcW6eM=" crossorigin="anonymous"></script>
 
 
 
@@ -125,6 +126,20 @@ https://github.com/alex-shpak/hugo-book
   
     <a href="/docs/2025-2026/biosensor/2025-bio-code/" class="">
       2025 Biosensor Code</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2025-2026/biosensor/adafruit-pca9685-pwm/" class="">
+      Adafruit PCA9685 PWM</a>
   
 
         </li>
@@ -512,6 +527,7 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#servo-movement">Servo Movement</a></li>
         <li><a href="#revneo-550-motor-movement">REV/NEO 550 motor movement</a></li>
+        <li><a href="#other-commands">Other Commands</a></li>
       </ul>
     </li>
   </ul>
@@ -529,10 +545,10 @@ https://github.com/alex-shpak/hugo-book
   <article class="markdown book-article"><h1 id="citadel-can-commands">Citadel CAN commands<a class="anchor" href="#citadel-can-commands">#</a></h1>
 <h2 id="starting-can-relay-mode">Starting CAN relay mode<a class="anchor" href="#starting-can-relay-mode">#</a></h2>
 <pre tabindex="0"><code>can_relay_mode,on</code></pre><h2 id="ping-command">Ping command<a class="anchor" href="#ping-command">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>can_relay_tovic,citadel,<span style="color:#ae81ff">1</span></span></span></code></pre></div><h2 id="motor-movement">Motor Movement<a class="anchor" href="#motor-movement">#</a></h2>
+<pre tabindex="0"><code>can_relay_tovic,citadel,1</code></pre><h2 id="motor-movement">Motor Movement<a class="anchor" href="#motor-movement">#</a></h2>
 <h3 id="servo-movement">Servo Movement<a class="anchor" href="#servo-movement">#</a></h3>
 <h4 id="structure">Structure:<a class="anchor" href="#structure">#</a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>can_relay_tovic,citadel,<span style="color:#ae81ff">40</span>,[group],[angle1],[angle2],[angle3]</span></span></code></pre></div><ul>
+<pre tabindex="0"><code>can_relay_tovic,citadel,40,[group],[angle1],[angle2],[angle3]</code></pre><ul>
 <li><strong>can_relay_tovic</strong> - call the can_relay_tovic command</li>
 <li><strong>citadel</strong> - call the citadel mcu</li>
 <li><strong>40</strong> - CAN command</li>
@@ -552,15 +568,20 @@ https://github.com/alex-shpak/hugo-book
 </li>
 </ul>
 <h4 id="example">Example:<a class="anchor" href="#example">#</a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>can_relay_tovic,citadel,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">30</span></span></span></code></pre></div><h3 id="revneo-550-motor-movement">REV/NEO 550 motor movement<a class="anchor" href="#revneo-550-motor-movement">#</a></h3>
+<pre tabindex="0"><code>can_relay_tovic,citadel,40,1,30,30,30</code></pre><h3 id="revneo-550-motor-movement">REV/NEO 550 motor movement<a class="anchor" href="#revneo-550-motor-movement">#</a></h3>
 <h4 id="structure-1">Structure<a class="anchor" href="#structure-1">#</a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>can_relay_tovic,citadel,<span style="color:#ae81ff">19</span>,[speed]</span></span></code></pre></div><ul>
+<pre tabindex="0"><code>can_relay_tovic,citadel,19,[speed]</code></pre><ul>
 <li><strong>citadel</strong> - call the citadel MCU</li>
 <li><strong>19</strong> - CAN command</li>
 <li><strong>Speed</strong> - speed that the motor should run at</li>
-<li></li>
 </ul>
-</article>
+<h4 id="example-1">Example<a class="anchor" href="#example-1">#</a></h4>
+<pre tabindex="0"><code>can_relay_tovic,19,20</code></pre><h3 id="other-commands">Other Commands<a class="anchor" href="#other-commands">#</a></h3>
+<h4 id="ping">Ping<a class="anchor" href="#ping">#</a></h4>
+<p><strong>Expected response:</strong> pong</p>
+<pre tabindex="0"><code>can_relay_tovic,citadel,CMD_PING</code></pre><h4 id="cmd_rev_stop">CMD_REV_STOP<a class="anchor" href="#cmd_rev_stop">#</a></h4>
+<p><strong>Expected response:</strong> stop REV motor</p>
+<pre tabindex="0"><code>can_relay_tovic,citadel,CMD_REV_STOP</code></pre></article>
  
       
 
@@ -569,7 +590,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 <div>
-<a class="flex align-center" href="https://github.com/jackrschumacher/ASTRA-Notes/commit/5028a3c35ab0cd3caed531eb2f43f3a7bbb450e8" title='Last modified by Jack Schumacher | January 28, 2026' target="_blank" rel="noopener">
+<a class="flex align-center" href="https://github.com/jackrschumacher/ASTRA-Notes/commit/900d69348d2a2a23112116874fd40430c3872dc9" title='Last modified by Jack Schumacher | January 28, 2026' target="_blank" rel="noopener">
     <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
     <span>January 28, 2026</span>
   </a>
@@ -592,9 +613,9 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
     <span>
     
-      <a href="/docs/2025-2026/biosensor/2025-bio-code/" class="flex align-center">
+      <a href="/docs/2025-2026/biosensor/adafruit-pca9685-pwm/" class="flex align-center">
         <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
-        <span>2025 Biosensor Code</span>
+        <span>Adafruit PCA9685 PWM</span>
       </a>
     
     </span>
@@ -647,6 +668,7 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#servo-movement">Servo Movement</a></li>
         <li><a href="#revneo-550-motor-movement">REV/NEO 550 motor movement</a></li>
+        <li><a href="#other-commands">Other Commands</a></li>
       </ul>
     </li>
   </ul>
