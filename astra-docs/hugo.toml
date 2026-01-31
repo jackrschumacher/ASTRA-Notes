@@ -17,6 +17,7 @@ enableGitInfo = true
   BookSection = 'docs'
   BookTheme = 'auto'
   BookSearch = true
+  BookFavicon = 'favicon.png'
   BookDateFormat = 'January 2, 2006'
   # This specific theme parameter relies on enableGitInfo being true at the top level
   BookLastChangeLink = 'https://github.com/jackrschumacher/ASTRA-Notes/commit/{{ .GitInfo.Hash }}'
