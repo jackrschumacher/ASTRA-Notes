@@ -39,7 +39,7 @@ Equipment Links
 
 > [!WARNING]
 >
-> We are currently not using this board due to PWM limitations. These pins are in case this issue can be resolved
+> This board requires an additional PWM servo driver in order to work with more than 8 PWM devices. See [Adafruit PCA9685 PWM](/docs/2025-2026/biosensor/adafruit-pca9685-pwm/) for more details on usage. The servo assignments below 
 
 ```
 Valve1: 1
