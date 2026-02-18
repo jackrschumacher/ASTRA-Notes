@@ -21,6 +21,8 @@ Once you have installed Visual Studio Code, you need the following extensions:
 
 ## Opening the Platform IO project and Uploading to the MCU
 
+### Setting up the repository and PlatformIO project
+
 > [!IMPORTANT]
 >
 > The current published repository branch `(citadel-2026)` uses the `ESP32-DevKitV1` not the `ESP32-S3-DevKit`
@@ -74,5 +76,7 @@ board = esp32doit-devkit-v1
 ```
 
 After you have verified this, you can click the checkmark icon on the bottom bar of VSCode to build the project. If this succeeds, you are ready to upload code to the MCU. For the `ESP32-DevKitV1`, use a USB-A to USB-C cable to ensure proper data and power transfer. 
+
+### Uploading to the board
 
 Click the arrow icon to upload to the MCU and click the plug icon (by the upload icon) to show the serial monitor. You may have to change the serial port if it is not auto-recognized correctly. To do this, click the plug icon with the word 'auto' next to it. This should allow you to select a specific COM port. Look for one the says something like `Standard Serial over USB...`.
