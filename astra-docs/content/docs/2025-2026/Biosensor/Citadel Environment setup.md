@@ -19,6 +19,12 @@ Once you have installed Visual Studio Code, you need the following extensions:
 
 {{< button href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" >}}Microsoft C/C++ for Visual Studio Code{{< /button >}}
 
+> [!CAUTION]
+>
+> If you are using the `ESP-32-Devkit V1` you need to download the following driver:
+>
+> {{< button href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads" >}}Silicon Labs USB to UART driver{{< /button >}}
+
 ## Opening the Platform IO project and Uploading to the MCU
 
 ### Setting up the repository and PlatformIO project
