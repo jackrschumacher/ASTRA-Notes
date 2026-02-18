@@ -1,6 +1,6 @@
 ---
 title: Prototypes
-weight: 1
+weight: 10
 bookCollapseSection: true  # Optional: Makes the class folder clickable/collapsible
 ---
 
