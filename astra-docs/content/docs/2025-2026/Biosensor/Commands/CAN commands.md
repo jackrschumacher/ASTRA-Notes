@@ -77,7 +77,7 @@ can_relay_tovic,citadel,40,[valveID],[tubeID],[distributorID]
 | **CommandID** | Data Format                                                  | **Returns/Output**                                           |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `16`          | N/A                                                          | Stops REV motor (NEO550)                                     |
-| `17`          | **double:** mot                                              | ID's REV motor                                               |
+| `17`          | **double:** motorID                                          | ID's REV motor                                               |
 | `18`          | **double:** brakeAmount                                      | Brakes REV motor                                             |
 | `19`          | <u>**double**: CITADEL fan speed</u>, **float**: core duty cycles, **short**: arm duty cycle | Moves the NEO550 motor a set amount by converting the input value to microseconds |
 
