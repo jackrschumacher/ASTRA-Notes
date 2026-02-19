@@ -1,6 +1,6 @@
 ---
 title: Adafruit PCA9685 PWM
-weight: 1
+weight: 2
 ---
 
 
