@@ -84,6 +84,10 @@ can_relay_tovic,citadel,40,[valveID],[tubeID],[distributorID]
 #### Format
 
 ```
+can_relay_tovic,[comandID],[value (if applicable)]
+```
+
+```
 can_relay_tovic,citadel,19,[movement amount]
 ```
 
@@ -94,3 +98,9 @@ can_relay_tovic,citadel,19,[movement amount]
 
 
 {{< /tabs >}}
+
+# Resources
+
+## Example code
+
+{{< button href="https://github.com/SHC-ASTRA/arm-embedded/blob/main/arm_main/src/main.cpp" >}}Arm code- can see usage examples{{< /button >}}
