@@ -72,7 +72,7 @@ can_relay_tovic,citadel,40,[valveID],[tubeID],[distributorID]
 
 {{% /tab %}}
 
-{{% tab "NEO movement" %}} 
+{{% tab "REV movement" %}} 
 
 | **CommandID** | Data Format                                                  | **Returns/Output**                                           |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
