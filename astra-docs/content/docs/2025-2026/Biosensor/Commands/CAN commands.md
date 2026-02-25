@@ -101,6 +101,18 @@ can_relay_tovic,citadel,19,[movement amount]
 
 # Resources
 
+## Example Commands
+
+```
+can_relay_tovic,citadel,40,0,0,1,0
+can_relay_tovic,citadel,40,0,0,0,0
+
+
+can_relay_tovic,citadel,40,1,70
+```
+
+
+
 ## Example code
 
 {{< button href="https://github.com/SHC-ASTRA/arm-embedded/blob/main/arm_main/src/main.cpp" >}}Arm code- can see usage examples{{< /button >}}
