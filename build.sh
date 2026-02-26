@@ -11,8 +11,7 @@ main() {
 
   DART_SASS_VERSION=1.97.3
   GO_VERSION=1.25.6
-  HUGO_VERSION=0.156.0
-  # HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | sed -n 's/.*"tag_name": "v\([^"]*\)".*/\1/p')
+  HUGO_VERSION=0.157.0
   NODE_VERSION=24.13.0
 
   export TZ=Europe/Oslo
