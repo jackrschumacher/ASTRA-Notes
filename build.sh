@@ -11,7 +11,8 @@ main() {
 
   DART_SASS_VERSION=1.97.3
   GO_VERSION=1.25.6
-  HUGO_VERSION=0.157.0
+  HUGO_VERSION_HVM=$(cat astra-docs/.hvm)
+  HUGO_VERSION="${HUGO_VERSION_HVM#v}"
   NODE_VERSION=24.13.0
 
   export TZ=Europe/Oslo
