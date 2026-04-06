@@ -34,7 +34,7 @@ main() {
   export PATH="${HOME}/.local/go/bin:${PATH}"
 
   # Install Hugo
-   echo "Installing Hugo ${RAW_VERSION} (${HVM_EDITION})..."
+  echo "Installing Hugo ${RAW_VERSION} (${HVM_EDITION})..."
   if [ "$HVM_EDITION" = "extended" ]; then
     HUGO_TARBALL="hugo_extended_${RAW_VERSION}_linux-amd64.tar.gz"
   else
