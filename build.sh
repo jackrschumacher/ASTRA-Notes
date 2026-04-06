@@ -11,8 +11,10 @@ main() {
 
   DART_SASS_VERSION=1.97.3
   GO_VERSION=1.25.6
-  HUGO_VERSION_HVM=$(cat astra-docs/.hvm)
-  HUGO_VERSION="${HUGO_VERSION_HVM#v}"
+  HVM_CONTENT=$(cat astra-docs/.hvm)
+  HVM_VERSION=$(echo "$HVM_CONTENT" | cut -d'/' -f1) # e.g., v0.159.2
+  HVM_EDITION=$(echo "$HVM_CONTENT" | cut -d'/' -f2) # e.g., extended
+  RAW_VERSION="${HVM_VERSION#v}"                     # e.g., 0.159.2
   NODE_VERSION=24.13.0
 
   export TZ=Europe/Oslo
@@ -32,11 +34,17 @@ main() {
   export PATH="${HOME}/.local/go/bin:${PATH}"
 
   # Install Hugo
-  echo "Installing Hugo ${HUGO_VERSION}..."
-  curl -sLJO "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-  mkdir "${HOME}/.local/hugo"
-  tar -C "${HOME}/.local/hugo" -xf "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-  rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+   echo "Installing Hugo ${RAW_VERSION} (${HVM_EDITION})..."
+  if [ "$HVM_EDITION" = "extended" ]; then
+    HUGO_TARBALL="hugo_extended_${RAW_VERSION}_linux-amd64.tar.gz"
+  else
+    HUGO_TARBALL="hugo_${RAW_VERSION}_linux-amd64.tar.gz"
+  fi
+  
+  curl -sLJO "https://github.com/gohugoio/hugo/releases/download/${HVM_VERSION}/${HUGO_TARBALL}"
+  mkdir -p "${HOME}/.local/hugo"
+  tar -C "${HOME}/.local/hugo" -xf "${HUGO_TARBALL}"
+  rm "${HUGO_TARBALL}"
   export PATH="${HOME}/.local/hugo:${PATH}"
 
   # Install Node.js
