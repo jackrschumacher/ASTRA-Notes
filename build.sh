@@ -11,10 +11,10 @@ main() {
 
   DART_SASS_VERSION=1.97.3
   GO_VERSION=1.25.6
-  HVM_CONTENT=$(cat astra-docs/.hvm)
-  HVM_VERSION=$(echo "$HVM_CONTENT" | cut -d'/' -f1) # e.g., v0.159.2
+  HVM_CONTENT=$(cat astra-docs/.hvm | tr -d '\r\n')  # Strips hidden line endings
+  HVM_VERSION=$(echo "$HVM_CONTENT" | cut -d'/' -f1) # e.g., v0.160.0
   HVM_EDITION=$(echo "$HVM_CONTENT" | cut -d'/' -f2) # e.g., extended
-  RAW_VERSION="${HVM_VERSION#v}"                     # e.g., 0.159.2
+  RAW_VERSION="${HVM_VERSION#v}"                     # e.g., 0.160.0
   NODE_VERSION=24.13.0
 
   export TZ=Europe/Oslo
