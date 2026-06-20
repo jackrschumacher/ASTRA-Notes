@@ -1,5 +1,5 @@
 baseURL = 'https://astra.jackrschumacher.com'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'ASTRA Notes'
 
 # MOVE THIS TO THE TOP LEVEL (OUT OF PARAMS)
