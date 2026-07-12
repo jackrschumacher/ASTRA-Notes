@@ -115,4 +115,4 @@ can_relay_tovic,citadel,40,1,70
 
 ## Example code
 
-{{< button href="https://github.com/SHC-ASTRA/arm-embedded/blob/main/arm_main/src/main.cpp" >}}Arm code- can see usage examples{{< /button >}}
+<!-- {{</* button href="https://github.com/SHC-ASTRA/arm-embedded/blob/main/arm_main/src/main.cpp" */>}}Arm code- can see usage examples{{</* /button */>}} -->
