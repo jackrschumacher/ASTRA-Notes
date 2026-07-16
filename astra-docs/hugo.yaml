@@ -35,9 +35,9 @@ params:
       path: favicon-96x96.png   # Path relative to 'static'
       width: 25                  # Adjust size as needed
       height: 25
-  # banner:
-    # key: "announcement"
-    # message: This site has recently been migrated to Hugo. Report issues [here](https://github.com/jackrschumacher/website/issues)
+  banner:
+     key: "announcement"
+     message: This site has recently been migrated to the Hextra theme. Report issues [here](https://github.com/jackrschumacher/ASTRA-Notes/issues)
   footer:
     enable: false
     displayCopyright: true
@@ -92,7 +92,7 @@ menu:
       weight: 80
 
     - name: GitHub 
-      url: "https://github.com/FRC930/FRC-Match-dashboard"
+      url: "https://github.com/jackrschumacher/ASTRA-Notes"
       weight: 90
       params: 
         icon: github
