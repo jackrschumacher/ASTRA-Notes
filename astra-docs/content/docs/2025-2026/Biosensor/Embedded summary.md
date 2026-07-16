@@ -5,21 +5,15 @@ weight: 2
 
 # Summary
 - 9 servos
-- One NEO 550 functioning as the fan motor
-
-## Resources
-
-Equipment Links
-
-
-<br></br>
 
 
 
 {{< tabs >}}
-{{% tab "ESP-32 S3" %}} 
 
-### ESP-32 S3 pins
+
+
+{{< tab name="ESP-32 S3 pins" >}}
+
 
 > [!WARNING]
 >
@@ -34,20 +28,16 @@ Distributor1: 41
 Distributor2: 40
 Distributor3: 39  - Commented out because of S3 timing issue
 
-Chemical1: 38
+Chemical1: 38	
 Chemical2: 37
 Chemical3: 36
 ```
 
-
-
-{{% /tab %}}
+{{< /tab >}}
 
 
 
-{{% tab "ESP-32 Devkit V1" %}} 
-
-### ESP-32 Devkit V1 GPIO/PWM pins
+{{< tab name="ESP-32 Devkit V1 GPIO/PWM pins" >}}
 
 ### Avaliable Pins with PWM, IO and no board functions
 
@@ -68,10 +58,10 @@ Chemical3: 36
 * 4
 
 
+{{< /tab >}}
 
 
 
-{{% /tab %}}
 {{< /tabs >}}
 
 

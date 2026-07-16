@@ -3,27 +3,46 @@ title: Citadel Environment setup
 weight: 1
 ---
 
-# Citadel Environment setup
 
 ## Tools
 
 To setup citadel embedded code, you need a few tools, listed below. 
-<!-- 
-{{</* button href="https://code.visualstudio.com/Download" */>}}Visual Studio Code{{</* /button */>}}
 
-{{</* button href="https://git-scm.com/install/" */>}}Git{{</* /button */>}} -->
+{{< cards cols = "1">}}
+
+
+{{< card link="https://code.visualstudio.com/Download" title="Visual Studio Code" icon="code" >}}
+{{< card link="https://git-scm.com/install/" title="Git" icon="code" >}}
+
+{{< /cards >}}
+
 
 Once you have installed Visual Studio Code, you need the following extensions:
 
-<!-- {{</* button href="https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide" */>}}PlaformIO extension for Visual Studio Code{{</* /button */>}}
 
-{{</* button href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" */>}}Microsoft C/C++ for Visual Studio Code{{</* /button */>}} -->
+{{< cards cols = "1">}}
+
+
+{{< card link="https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide" title="PlaformIO extension for Visual Studio Code" icon="code" >}}
+{{< card link="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" title="Microsoft C/C++ for Visual Studio Code" icon="code" >}}
+
+{{< /cards >}}
+
+
 
 > [!CAUTION]
 >
 > If you are using the `ESP-32-Devkit V1` you need to download the following driver:
->
-<!-- > {{</* button href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads" */>}}Silicon Labs USB to UART driver{{</* /button */>}} -->
+>{{< cards cols = "1">}}
+
+
+{{< card link="https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide" title="Silicon Labs USB to UART driver" icon="code" >}}
+
+
+{{< /cards >}}
+
+
+
 
 ## Opening the Platform IO project and Uploading to the MCU
 
@@ -42,7 +61,16 @@ https://github.com/SHC-ASTRA/biosensor-embedded.git (If you have HTTPS)
 
 You want to be on the `citadel-2026` branch
 
-<!-- {{</* button href="https://github.com/SHC-ASTRA/biosensor-embedded/tree/citadel-2026" */>}}Biosensor-embedded GitHub repository{{</* /button */>}} -->
+
+{{< cards cols = "1">}}
+
+
+{{< card link="https://github.com/SHC-ASTRA/biosensor-embedded/tree/citadel-2026" title="Biosensor-embedded GitHub repository" icon="code" >}}
+
+
+{{< /cards >}}
+
+
 
 Then open the Platform IO extension in Visual Studio Code, and click 'Open' and select the folder which you have cloned the Git repository into. 
 
